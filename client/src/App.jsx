@@ -1,13 +1,16 @@
 import { Auth, Blogs, Blog } from "./components";
+import { Route, Routes } from "react-router";
 
 function App() {
   return (
-    <div>
+    <div className="overflow-hidden">
       {/* <Auth /> */}
-      <div>
-        <Blogs />
-      </div>
-      Content Management System
+      <Routes>
+        <Route path="/" element={<Auth />} />
+        <Route index element={<Auth />} />
+        <Route path={"/blogs"} element={<Blogs />} />
+        <Route path={"/blogs/:id"} element={<Blog />} />
+      </Routes>
     </div>
   );
 }
