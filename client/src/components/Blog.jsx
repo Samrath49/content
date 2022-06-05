@@ -1,3 +1,5 @@
+import { useParams } from "react-router";
+
 const Blog = () => {
   return (
     <div>
